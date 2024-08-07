@@ -1,5 +1,6 @@
 import express from 'express';
 import cor from 'cors';
+import cookieParser from 'cookie-parser';
 import router from './routes/index.js';
 import databaseConnection from './config/dbConfig.js';
 import dotenv from 'dotenv';
@@ -12,6 +13,7 @@ const app = express();
 app.use(cor());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 // Define routes
 app.use('/api', router);
