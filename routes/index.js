@@ -4,7 +4,7 @@ import globalErrorHandler from '../middlewares/globalErrorHandler.js';
 
 const router = express.Router();
 
-router.use('/user', userRouter);
+router.use('/auth', userRouter);
 router.use(globalErrorHandler);
 
 export default router;
